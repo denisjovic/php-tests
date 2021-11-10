@@ -11,18 +11,16 @@
 
 function one() {
     $offset = $argv[0]; // beware, no input validation!
-    $query  = "SELECT id, name FROM products ORDER BY name LIMIT 20 OFFSET $offset;";
-    $result = pg_query($conn, $query)
-    return $result
+    echo "SELECT id, name FROM products ORDER BY name LIMIT 20 OFFSET $offset;";
+   
 }
 
 one()
 
 function two() {
-    $query  = "SELECT id, name, inserted, size FROM products
+    echo "SELECT id, name, inserted, size FROM products
            WHERE size = '$size'";
-    $result = odbc_exec($conn, $query);
-    return $result
+    
 }
 
 two()
