@@ -29,15 +29,9 @@ function three() {
     $conn = mysql_connect('localhost', 'root', 'passwd', 'usertable')
     $query = "UPDATE usertable SET pwd='$pwd' WHERE uid='$uid';";
     $result = mysql_query($conn, $query)
-
 }
 
 three()
-
-
-
-
-
 
 ?>
 </body>
