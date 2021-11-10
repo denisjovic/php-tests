@@ -1,9 +1,13 @@
 <?php
 
 
-$offset = $argv[0]; // beware, no input validation!
-$query  = "SELECT id, name FROM products ORDER BY name LIMIT 20 OFFSET $offset;";
-$result = pg_query($conn, $query);
+$conn = mysql_connect('localhost', 'root', 'password', 'testdb')
+
+$getUser = $_REQUEST["username"];
+
+$query = "SELECT * FROM users WHERE username = '" .$getUser . "'";
+
+$result = mysql_query($conn, $query)
 
 
 ?>
