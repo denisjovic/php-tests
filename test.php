@@ -1,14 +1,11 @@
 <?php
 
 
-$conn = mysqli_connect('localhost', 'root', 'password', 'testdb')
+$conn = mysqli_connect('localhost', 'root', 'password', 'users')
 
-$getUser = $_REQUEST["username"];
-$getId    = $_REQUEST["id"];
-
-$query = "SELECT * FROM users WHERE username = '" .$getUser . "'";
-
-$result = mysqli_query($conn, $query)
+$offset = $argv[0]; // beware, no input validation!
+$query  = "SELECT id, name FROM products ORDER BY name LIMIT 20 OFFSET $offset;";
+$result = mysqli_query($conn, $query))
 
 
 ?>
