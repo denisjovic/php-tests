@@ -5,7 +5,7 @@
 </head>
 <body>
 <h2>SQL Injection</h2>
-
+<!-- 
 <?php
 
 $db = new SQLite3( "my_db.sqlite3" );
@@ -44,6 +44,6 @@ if ( $_GET["action"] == "all" ) {
 	}
 
 }
-?>
+?> -->
 </body>
 </html>

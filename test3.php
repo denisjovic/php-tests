@@ -11,36 +11,29 @@
 
 function one() {
     $offset = $argv[0]; // beware, no input validation!
-    echo "SELECT id, name FROM products ORDER BY name LIMIT 20 OFFSET $offset;";
-   
+    $query  = "SELECT id, name FROM products ORDER BY name LIMIT 20 OFFSET $offset;";
+    $result = pg_query($conn, $query)
 }
 
 one()
 
 function two() {
-    echo "SELECT id, name, inserted, size FROM products
+    $query  = "SELECT id, name, inserted, size FROM products
            WHERE size = '$size'";
-    
+    $result = odbc_exec($conn, $query);
 }
 
 two()
 
 function three() {
+    $conn = mysql_connect('localhost', 'root', 'passwd', 'usertable')
     $query = "UPDATE usertable SET pwd='$pwd' WHERE uid='$uid';";
-    return $query
+    $result = mysql_query($conn, $query)
 
 }
 
 three()
 
-function four() {
-    $query  = "SELECT * FROM products WHERE id LIKE '%$prod%'";
-    $result = mssql_query($query);
-    return $result
-
-}
-
-four()
 
 
 

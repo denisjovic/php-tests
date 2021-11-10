@@ -7,5 +7,4 @@ $getUser = $_REQUEST["username"];
 
 echo "SELECT * FROM users WHERE username = '" .$getUser . "'";
 
-
 ?>
