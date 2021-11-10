@@ -1,17 +1,30 @@
-<?php
 
-function testSQLi() {
-	$conn = mysql_connect('localhost', 'root', 'password', 'testdb');
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<?php
 
-	$articleid = $_GET[‘article’];
-	$query = "SELECT * FROM articles WHERE articleid = $articleid";
+// function testSQLi() {
+// 	$conn = mysql_connect('localhost', 'root', 'password', 'testdb');
 
-	$result = mysql_query($conn, $query);
-};
+// 	$articleid = $_GET[‘article’];
+// 	$query = "SELECT * FROM articles WHERE articleid = $articleid";
 
-testSQLi();
+// 	$result = mysql_query($conn, $query);
+// };
+
+// // testSQLi();
+
+echo 'hello';
 
 
 
 
 ?>
+
+</body>
+</html>
