@@ -9,20 +9,15 @@
 <?php
 
 function testSQLi() {
-	$conn = mysql_connect('localhost', 'root', 'password', 'testdb');
 
-	$articleid = $_GET[‘article’];
-	echo "SELECT * FROM articles WHERE articleid = $articleid";
+	$user = $_POST[username];
+	$pass = $_POST[password];
+
+	$query = mysql_query("SELECT * FROM users WHERE username = ' " . $user ."' AND password = '".$pass."'");
 
 };
 
 testSQLi();
-
-echo 'hello';
-
-
-
-
 ?>
 
 </body>
